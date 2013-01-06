@@ -7,7 +7,7 @@ class Customer
   end
 
   def add_rental(rental)
-    _rentals << rental
+    @rentals << rental
   end
 
   def statement
