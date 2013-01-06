@@ -8,4 +8,4 @@ If you want to have autotest watching your refactoring, don't forget to run
 - gem install ZenTest
 
 For mac users, add
-- gem install ZenTest autotest-growl autotest-fsevent
+- gem install autotest-growl autotest-fsevent
