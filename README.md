@@ -7,7 +7,7 @@ A customer can printout his statement. On the statement must appear:
 - The customer's name
 - Each movie he rents, with its price
 - The total amount owed
-- The frequent renters point he's earned
+- The frequent renter points he's earned
 
 For each movie category, some rules apply:
 Regular movies:
