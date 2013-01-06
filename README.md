@@ -1,19 +1,7 @@
 Video Store refactoring exercise in ruby
 ========================================
 
-This repo is the starting point of Martin Fowler's videostore refactoring example in Ruby.
-
-If you want to have autotest watching your refactoring, don't forget to run
-- gem install rspec
-- gem install ZenTest
-
-For mac users, run
-- gem install autotest-growl autotest-fsevent
-
-Requirements
-============
-
-The following requirements have already been implemented.
+This repo is the starting point of Martin Fowler's videostore refactoring example in Ruby. The following requirements have already been implemented.
 
 A customer can printout his statement. On the statement must appear:
 - The customer's name
