@@ -7,5 +7,5 @@ If you want to have autotest watching your refactoring, don't forget to run
 - gem install rspec
 - gem install ZenTest
 
-For mac users, add
+For mac users, run
 - gem install autotest-growl autotest-fsevent
