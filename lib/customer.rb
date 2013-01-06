@@ -42,7 +42,7 @@ class Customer
       total_amount += this_amount
     end
 
-    result += "Amount owed is #{total_amount}\n"
+    result += "Amount owed is $#{total_amount}\n"
     result += "You earned #{frequent_renter_points} frequent renter points"
     result
   end
