@@ -30,5 +30,5 @@ Challenge
 =========
 
 Refactor the existing code for the following new requirements:
-- print an HTML customer statemnt.
+- print an HTML customer statement.
 - add an extra category with it's own rules
