@@ -9,7 +9,8 @@ A customer can printout his statement. On the statement must appear:
 - The total amount owed
 - The frequent renter points he's earned
 
-For each movie category, some rules apply:
+For each movie category, some rules apply.
+
 Regular movies:
 - amount is $2.00 for the first 2 days
 - an extra $1.50 is added for each additional day
