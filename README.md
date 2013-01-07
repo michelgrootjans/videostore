@@ -32,3 +32,10 @@ Challenge
 Refactor the existing code for the following new requirements:
 - print an HTML customer statement.
 - add an extra category with it's own rules
+
+Setup
+=====
+
+Unless you don't want to test during refactoring, you probably want to install rspec and ZenTest. Run 'gem install rspec ZenTest'. To start to test continuously, simply type 'autotest' in the root of this project.
+
+Mac usrers might want to run 'gem install autotest-growl autotest-fsevent'
