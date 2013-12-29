@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    autotest-growl (0.2.16)
+    autotest-standalone (4.5.11)
     diff-lcs (1.2.5)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -15,4 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autotest-growl
+  autotest-standalone
   rspec

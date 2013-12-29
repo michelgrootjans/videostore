@@ -1,4 +1,5 @@
 require "autotest/restart"
+require "autotest/growl"
 
 Autotest.add_hook(:initialize) do |at|
   at.clear_mappings
