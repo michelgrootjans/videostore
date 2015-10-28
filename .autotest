@@ -1,9 +1,0 @@
-require "autotest/restart"
-require "autotest/growl"
-
-Autotest.add_hook(:initialize) do |at|
-  at.clear_mappings
-  at.add_mapping(/.*/) do |filename, _|
-    Dir.glob("spec/*_spec.rb")
-  end
-end

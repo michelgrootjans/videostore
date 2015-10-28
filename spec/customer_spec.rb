@@ -1,3 +1,4 @@
+require 'rspec'
 require "movie"
 require "rental"
 require "customer"
