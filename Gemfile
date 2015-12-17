@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-puts "I'm in the Gemfile"
-puts "This is the ruby version I'm using:"
-puts RUBY_VERSION
+puts "RUBY_VERSION: #{RUBY_VERSION}"
+puts "USER: #{ENV['USER']}"
 
 gem 'rspec'
 gem 'guard'
