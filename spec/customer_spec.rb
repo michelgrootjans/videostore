@@ -10,24 +10,15 @@ describe "a customer" do
   let(:childrens_movie) { Movie.new("Bambi", Movie::CHILDRENS) }
 
   describe "without any rentals" do
-    it "should have an empty statement" do
-      customer.statement.should == "Rental record for Martin\nAmount owed is $0\nYou earned 0 frequent renter points"
-    end
+    it { expect(customer.statement).to eq "Rental record for Martin\nAmount owed is $0\nYou earned 0 frequent renter points" }
   end
 
   describe "with one regular rental" do
     describe "for 1 day" do
-      before(:each) do
-        customer.add_rental(Rental.new(regular_movie, 1))
-      end
+      before { customer.add_rental(Rental.new(regular_movie, 1)) }
 
-      it "should owe $2" do
-        customer.statement.should include "Amount owed is $2"
-      end
-
-      it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $2" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
 
     describe "for 2 days" do
@@ -36,11 +27,11 @@ describe "a customer" do
       end
 
       it "should owe $2" do
-        customer.statement.should include "Amount owed is $2"
+        expect(customer.statement).to include "Amount owed is $2"
       end
 
       it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
+        expect(customer.statement).to include "You earned 1 frequent renter points"
       end
     end
 
@@ -50,11 +41,11 @@ describe "a customer" do
       end
 
       it "should owe $2" do
-        customer.statement.should include "Amount owed is $3.5"
+        expect(customer.statement).to include "Amount owed is $3.5"
       end
 
       it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
+        expect(customer.statement).to include "You earned 1 frequent renter points"
       end
     end
   end
@@ -66,11 +57,11 @@ describe "a customer" do
       end
 
       it "should owe $3" do
-        customer.statement.should include "Amount owed is $3"
+        expect(customer.statement).to include "Amount owed is $3"
       end
 
       it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
+        expect(customer.statement).to include "You earned 1 frequent renter points"
       end
     end
 
@@ -80,11 +71,11 @@ describe "a customer" do
       end
 
       it "should owe $6" do
-        customer.statement.should include "Amount owed is $6"
+        expect(customer.statement).to include "Amount owed is $6"
       end
 
       it "should have 2 frequent renter points" do
-        customer.statement.should include "You earned 2 frequent renter points"
+        expect(customer.statement).to include "You earned 2 frequent renter points"
       end
     end
 
@@ -94,11 +85,11 @@ describe "a customer" do
       end
 
       it "should owe $6" do
-        customer.statement.should include "Amount owed is $9"
+        expect(customer.statement).to include "Amount owed is $9"
       end
 
       it "should have 2 frequent renter points" do
-        customer.statement.should include "You earned 2 frequent renter points"
+        expect(customer.statement).to include "You earned 2 frequent renter points"
       end
     end
 
@@ -111,11 +102,11 @@ describe "a customer" do
       end
 
       it "should owe $1.5" do
-        customer.statement.should include "Amount owed is $1.5"
+        expect(customer.statement).to include "Amount owed is $1.5"
       end
 
       it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
+        expect(customer.statement).to include "You earned 1 frequent renter points"
       end
     end
 
@@ -125,11 +116,11 @@ describe "a customer" do
       end
 
       it "should owe $1.5" do
-        customer.statement.should include "Amount owed is $1.5"
+        expect(customer.statement).to include "Amount owed is $1.5"
       end
 
       it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
+        expect(customer.statement).to include "You earned 1 frequent renter points"
       end
     end
 
@@ -139,11 +130,11 @@ describe "a customer" do
       end
 
       it "should owe $3.5" do
-        customer.statement.should include "Amount owed is $3"
+        expect(customer.statement).to include "Amount owed is $3"
       end
 
       it "should have a frequent renter point" do
-        customer.statement.should include "You earned 1 frequent renter points"
+        expect(customer.statement).to include "You earned 1 frequent renter points"
       end
     end
   end
