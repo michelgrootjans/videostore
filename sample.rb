@@ -14,3 +14,4 @@ customer.add_rental(Rental.new(the_hobbit, 3))
 customer.add_rental(Rental.new(bambi, 3))
 
 puts customer.statement
+
