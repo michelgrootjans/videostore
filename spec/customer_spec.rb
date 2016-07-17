@@ -22,120 +22,64 @@ describe "a customer" do
     end
 
     describe "for 2 days" do
-      before(:each) do
-        customer.add_rental(Rental.new(regular_movie, 2))
-      end
+      before { customer.add_rental(Rental.new(regular_movie, 2)) }
 
-      it "should owe $2" do
-        expect(customer.statement).to include "Amount owed is $2"
-      end
-
-      it "should have a frequent renter point" do
-        expect(customer.statement).to include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $2" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
 
     describe "for 3 days" do
-      before(:each) do
-        customer.add_rental(Rental.new(regular_movie, 3))
-      end
+      before { customer.add_rental(Rental.new(regular_movie, 3)) }
 
-      it "should owe $2" do
-        expect(customer.statement).to include "Amount owed is $3.5"
-      end
-
-      it "should have a frequent renter point" do
-        expect(customer.statement).to include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $3.5" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
   end
 
   describe "with one new release rental" do
     describe "for 1 day" do
-      before(:each) do
-        customer.add_rental(Rental.new(new_movie, 1))
-      end
+      before { customer.add_rental(Rental.new(new_movie, 1)) }
 
-      it "should owe $3" do
-        expect(customer.statement).to include "Amount owed is $3"
-      end
-
-      it "should have a frequent renter point" do
-        expect(customer.statement).to include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $3" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
 
     describe "for 2 days" do
-      before(:each) do
-        customer.add_rental(Rental.new(new_movie, 2))
-      end
+      before { customer.add_rental(Rental.new(new_movie, 2)) }
 
-      it "should owe $6" do
-        expect(customer.statement).to include "Amount owed is $6"
-      end
-
-      it "should have 2 frequent renter points" do
-        expect(customer.statement).to include "You earned 2 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $6" }
+      it { expect(customer.statement).to include "You earned 2 frequent renter points" }
     end
 
     describe "for 3 days" do
-      before(:each) do
-        customer.add_rental(Rental.new(new_movie, 3))
-      end
+      before { customer.add_rental(Rental.new(new_movie, 3)) }
 
-      it "should owe $6" do
-        expect(customer.statement).to include "Amount owed is $9"
-      end
-
-      it "should have 2 frequent renter points" do
-        expect(customer.statement).to include "You earned 2 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $9" }
+      it { expect(customer.statement).to include "You earned 2 frequent renter points" }
     end
 
   end
 
   describe "with one children's rental" do
     describe "for 1 day" do
-      before(:each) do
-        customer.add_rental(Rental.new(childrens_movie, 1))
-      end
+      before { customer.add_rental(Rental.new(childrens_movie, 1)) }
 
-      it "should owe $1.5" do
-        expect(customer.statement).to include "Amount owed is $1.5"
-      end
-
-      it "should have a frequent renter point" do
-        expect(customer.statement).to include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $1.5" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
 
     describe "for 3 days" do
-      before(:each) do
-        customer.add_rental(Rental.new(childrens_movie, 3))
-      end
+      before { customer.add_rental(Rental.new(childrens_movie, 3)) }
 
-      it "should owe $1.5" do
-        expect(customer.statement).to include "Amount owed is $1.5"
-      end
-
-      it "should have a frequent renter point" do
-        expect(customer.statement).to include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $1.5" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
 
     describe "for 4 days" do
-      before(:each) do
-        customer.add_rental(Rental.new(childrens_movie, 4))
-      end
+      before { customer.add_rental(Rental.new(childrens_movie, 4)) }
 
-      it "should owe $3.5" do
-        expect(customer.statement).to include "Amount owed is $3"
-      end
-
-      it "should have a frequent renter point" do
-        expect(customer.statement).to include "You earned 1 frequent renter points"
-      end
+      it { expect(customer.statement).to include "Amount owed is $3" }
+      it { expect(customer.statement).to include "You earned 1 frequent renter points" }
     end
   end
 end
