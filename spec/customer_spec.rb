@@ -1,4 +1,5 @@
-require 'rspec'
+require 'spec_helper'
+
 require "movie"
 require "rental"
 require "customer"
