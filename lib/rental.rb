@@ -13,4 +13,8 @@ class Rental
   def frequent_renter_points
     @movie.frequent_renter_points_for(@days_rented)
   end
+
+  def movie_title
+    @movie.title
+  end
 end

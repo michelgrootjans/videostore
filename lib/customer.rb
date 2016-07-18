@@ -17,7 +17,7 @@ class Customer
     @rentals.each do |rental|
       frequent_renter_points += rental.frequent_renter_points
 
-      result += "\t#{rental.movie.title}\t#{rental.amount}\n"
+      result += "\t#{rental.movie_title}\t#{rental.amount}\n"
       total_amount += rental.amount
     end
 
