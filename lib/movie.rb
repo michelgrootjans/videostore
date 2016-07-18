@@ -18,8 +18,11 @@ class RegularMovie < Movie
   end
 
   def amount_for(days_rented)
-    return 2 if days_rented <= 2
-    return 2 + (days_rented-2) * 1.5
+    (days_rented <= 2) ? 2 : 2 + (days_rented-2) * 1.5
+  end
+
+  def frequent_renter_points_for(days_rented)
+    1
   end
 end
 
@@ -31,6 +34,10 @@ class NewMovie < Movie
   def amount_for(days_rented)
     days_rented * 3
   end
+
+  def frequent_renter_points_for(days_rented)
+    (days_rented == 1) ? 1 : 2
+  end
 end
 
 class ChildrensMovie < Movie
@@ -41,5 +48,9 @@ class ChildrensMovie < Movie
   def amount_for(days_rented)
     return 1.5 if days_rented <= 3
     return 1.5 + (days_rented-3) * 1.5
+  end
+
+  def frequent_renter_points_for(days_rented)
+    1
   end
 end

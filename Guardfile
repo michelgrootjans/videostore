@@ -45,7 +45,7 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec", failed_mode: :keep do
+guard :rspec, cmd: "bundle exec rspec", failed_mode: :keep, all_after_pass: true, all_on_start: true do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
