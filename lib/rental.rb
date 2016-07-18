@@ -5,4 +5,8 @@ class Rental
     @movie = movie
     @days_rented = days_rented
   end
+
+  def amount
+    @movie.amount_for(@days_rented)
+  end
 end

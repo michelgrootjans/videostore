@@ -14,7 +14,7 @@ class Customer
     total_amount = 0
     frequent_renter_points = 0
     result = "Rental record for #{@name}\n"
-    for rental in @rentals
+    @rentals.each do |rental|
       this_amount = 0
       case rental.movie.price_code
         when Movie::REGULAR
@@ -32,6 +32,8 @@ class Customer
         else
           # do nothing for a while
       end
+
+      this_amount = rental.amount
 
       frequent_renter_points += 1
       if rental.movie.price_code == Movie::NEW_RELEASE && rental.days_rented > 1
