@@ -7,6 +7,6 @@ describe BowlingGame do
 
   context 'rolling 0' do
     before { game.roll(0) }
-    it { expect(game.score).to eq 1 }
+    it { expect(game.score).to eq 0 }
   end
 end
