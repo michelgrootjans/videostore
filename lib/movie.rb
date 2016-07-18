@@ -17,3 +17,15 @@ class RegularMovie < Movie
     super(title, Movie::REGULAR)
   end
 end
+
+class NewMovie < Movie
+  def initialize(title)
+    super(title, Movie::NEW_RELEASE)
+  end
+end
+
+class ChildrensMovie < Movie
+  def initialize(title)
+    super(title, Movie::CHILDRENS)
+  end
+end
