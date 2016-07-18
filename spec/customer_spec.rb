@@ -6,7 +6,7 @@ require "customer"
 
 describe "a customer" do
   let(:customer) { Customer.new "Martin" }
-  let(:regular_movie) { Movie.new "Mad Max", Movie::REGULAR }
+  let(:regular_movie) { RegularMovie.new "Mad Max" }
   let(:new_movie)  { Movie.new("The Hobbit", Movie::NEW_RELEASE) }
   let(:childrens_movie) { Movie.new("Bambi", Movie::CHILDRENS) }
 

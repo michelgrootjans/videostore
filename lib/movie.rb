@@ -11,3 +11,9 @@ class Movie
     @price_code = price_code
   end
 end
+
+class RegularMovie < Movie
+  def initialize(title)
+    super(title, Movie::REGULAR)
+  end
+end
