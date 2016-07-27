@@ -11,6 +11,7 @@ describe VendingMachine do
   it { expect(subject.tray).to be_nil }
   it do
     sleep 30
+    
   end
 end
 
