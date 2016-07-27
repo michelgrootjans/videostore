@@ -9,4 +9,9 @@ describe BowlingGame do
     before { game.roll(0) }
     it { expect(game.score).to eq 0 }
   end
+
+  context 'rolling 1' do
+    before { game.roll(1) }
+    it { expect(game.score).to eq 1 }
+  end
 end
