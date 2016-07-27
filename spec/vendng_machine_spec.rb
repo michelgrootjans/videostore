@@ -7,9 +7,8 @@ class VendingMachine
 end
 
 describe VendingMachine do
-  it do
-    expect(subject.credits).to eq 0
-  end
+  it { expect(subject.credits).to eq 0 }
+  it { expect(subject.tray).to be_nil }
 
 end
 
